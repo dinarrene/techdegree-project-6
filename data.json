@@ -1,0 +1,140 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "project_name": "Connect Four", 
+            "description": "Object-oriented interactive game.",
+            "technologies": "HTML, CSS, JavaScript",
+            "live_link": "https://dinarrene.github.io/Four-In-A-Row-Game/",
+            "github_link": "https://github.com/dinarrene/Four-In-A-Row-Game",
+            "images_urls": [
+                {
+                    "name": "connect_thumb",
+                    "src": "/static/images/connect_four_thumb.png"
+                },
+                {
+                    "name": "connect_1",
+                    "src": "/static/images/connect_four_1.png"
+                },
+                {
+                    "name": "connect_2",
+                    "src": "/static/images/connect_four_2.png"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "project_name": "Random Quote Generator", 
+            "description": "Program that selects a random quote and background color at selected time intervals",
+            "technologies": "HTML, CSS, JavaScript",
+            "live_link": "https://dinarrene.github.io/techdegree-project-1/",
+            "github_link": "https://github.com/dinarrene/techdegree-project-1",
+            "images_urls": [
+                {
+                    "name": "quotes_thumb",
+                    "src": "/static/images/quotes_thumb.png"
+                },
+                {
+                    "name": "quotes_1",
+                    "src": "/static/images/quotes_1.png"
+                },
+                {
+                    "name": "quotes_2",
+                    "src": "/static/images/quotes_2.png"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "project_name": "List Pagination and Filtering", 
+            "description": "Paginated directory of students with search field",
+            "technologies": "HTML, CSS, JavaScript",
+            "live_link": "https://dinarrene.github.io/techdegree-project-2/",
+            "github_link": "https://github.com/dinarrene/techdegree-project-2",
+            "images_urls": [
+                {
+                    "name": "students_thumb",
+                    "src": "/static/images/students_thumb.png"
+                },
+                {
+                    "name": "students_1",
+                    "src": "/static/images/students_1.png"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "project_name": "Interactive Form", 
+            "description": "Interactive form with input validation",
+            "technologies": "HTML, CSS, JavaScript",
+            "live_link": "https://dinarrene.github.io/techdegree-project-3/",
+            "github_link": "https://github.com/dinarrene/techdegree-project-3",
+            "images_urls": [
+                {
+                    "name": "conf_thumb",
+                    "src": "/static/images/conf_thumb.png"
+                },
+                {
+                    "name": "conf_1",
+                    "src": "/static/images/conf_1.png"
+                },
+                {
+                    "name": "conf_2",
+                    "src": "/static/images/conf_2.png"
+                },
+                {
+                    "name": "conf_3",
+                    "src": "/static/images/conf_3.png"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "project_name": "Game Show App", 
+            "description": "OOP game that allows players to guess solution using key and mouse events",
+            "technologies": "HTML, CSS, JavaScript",
+            "live_link": "https://dinarrene.github.io/techdegree-project-4/",
+            "github_link": "https://github.com/dinarrene/techdegree-project-4",
+            "images_urls": [
+                {
+                    "name": "phrase_thumb",
+                    "src": "/static/images/phrase_thumb.png"
+                },
+                {
+                    "name": "phrase_1",
+                    "src": "/static/images/phrase_1.png"
+                },
+                {
+                    "name": "phrase_2",
+                    "src": "/static/images/phrase_2.png"
+                },
+                {
+                    "name": "phrase_3",
+                    "src": "/static/images/phrase_3.png"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "project_name": "Public API Request", 
+            "description": "Company directory sourcing public API with async data handling",
+            "technologies": "HTML, CSS, JavaScript, Fetch API",
+            "live_link": "https://dinarrene.github.io/techdegree-project-5/",
+            "github_link": "https://github.com/dinarrene/techdegree-project-5",
+            "images_urls": [
+                {
+                    "name": "startup_thumb",
+                    "src": "/static/images/startup_thumb.png"
+                },
+                {
+                    "name": "startup_1",
+                    "src": "/static/images/startup_1.png"
+                },
+                {
+                    "name": "startup_2",
+                    "src": "/static/images/startup_2.png"
+                }
+            ]
+        }
+    ]
+}
