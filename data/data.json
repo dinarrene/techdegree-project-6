@@ -7,7 +7,8 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "live_link": "https://dinarrene.github.io/Four-In-A-Row-Game/",
             "github_link": "https://github.com/dinarrene/Four-In-A-Row-Game",
-            "images_urls": ["/static/images/connect_four_thumb.png", "/static/images/connect_four_1.png", "/static/images/connect_four_2.png"]
+            "images_thumbnail": "/static/images/connect_four_thumb.png",
+            "images_urls": ["/static/images/connect_four_1.png", "/static/images/connect_four_2.png"]
         },
         {
             "id": 1,
@@ -16,7 +17,8 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "live_link": "https://dinarrene.github.io/techdegree-project-1/",
             "github_link": "https://github.com/dinarrene/techdegree-project-1",
-            "images_urls": [ "/static/images/quotes_thumb.png", "/static/images/quotes_1.png", "/static/images/quotes_2.png"]
+            "images_thumbnail": "/static/images/quotes_thumb.png",
+            "images_urls": [ "/static/images/quotes_1.png", "/static/images/quotes_2.png"]
         },
         {
             "id": 2,
@@ -25,7 +27,8 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "live_link": "https://dinarrene.github.io/techdegree-project-2/",
             "github_link": "https://github.com/dinarrene/techdegree-project-2",
-            "images_urls": ["/static/images/students_thumb.png", "/static/images/students_1.png"]
+            "images_thumbnail": "/static/images/students_thumb.png",
+            "images_urls": [ "/static/images/students_1.png"]
         },
         {
             "id": 3,
@@ -34,7 +37,8 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "live_link": "https://dinarrene.github.io/techdegree-project-3/",
             "github_link": "https://github.com/dinarrene/techdegree-project-3",
-            "images_urls": ["/static/images/conf_thumb.png", "/static/images/conf_1.png", "/static/images/conf_2.png", "/static/images/conf_3.png"]
+            "images_thumbnail": "/static/images/conf_thumb.png",
+            "images_urls": [ "/static/images/conf_1.png", "/static/images/conf_2.png", "/static/images/conf_3.png"]
         },
         {
             "id": 4,
@@ -43,7 +47,8 @@
             "technologies": ["HTML", "CSS", "JavaScript"],
             "live_link": "https://dinarrene.github.io/techdegree-project-4/",
             "github_link": "https://github.com/dinarrene/techdegree-project-4",
-            "images_urls": [ "/static/images/phrase_thumb.png", "/static/images/phrase_1.png", "/static/images/phrase_2.png", "/static/images/phrase_3.png"]
+            "images_thumbnail": "/static/images/phrase_thumb.png",
+            "images_urls": [ "/static/images/phrase_1.png", "/static/images/phrase_2.png", "/static/images/phrase_3.png"]
         },
         {
             "id": 5,
@@ -52,7 +57,8 @@
             "technologies": ["HTML", "CSS", "JavaScript", "Fetch API"],
             "live_link": "https://dinarrene.github.io/techdegree-project-5/",
             "github_link": "https://github.com/dinarrene/techdegree-project-5",
-            "images_urls": ["/static/images/startup_thumb.png", "/static/images/startup_1.png","/static/images/startup_2.png"]
+            "images_thumbnail": "/static/images/startup_thumb.png",
+            "images_urls": [ "/static/images/startup_1.png","/static/images/startup_2.png"]
         }
     ]
 }
