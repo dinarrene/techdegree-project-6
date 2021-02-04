@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const { projects } = require('./data/data.json');
 
-
 const app = express();
 
 // View engine setup
@@ -33,6 +32,18 @@ app.get('/about', function(req, res, next) {
     res.render('about');
 });
 
+// Error Handlers
+app.use((req, res, next) => {
+    const err = new Error('Page Not Found');
+    err.status = 404;
+    next(err);
+});
+
+app.use((err, req, res, next) => {
+    res.locals.error = err;
+    res.status(err.status);
+    res.render('error');
+})
 
 
 app.listen(3000, () => {
