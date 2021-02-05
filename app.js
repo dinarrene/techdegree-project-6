@@ -40,7 +40,7 @@ app.use('/:id', (req, res, next) => {
     if (projects[req.params.id]) {
         res.render('project');
     } else {
-       const err = new Error('Page Not Found');
+       const err = new Error();
        err.status = 404;
        err.message = `Looks like the page you requested doesn't exists.` 
        next(err);
