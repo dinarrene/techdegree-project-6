@@ -1,4 +1,5 @@
 const express = require('express');
+const { exists } = require('fs');
 const path = require('path');
 const { render } = require('pug');
 const { projects } = require('./data/data.json');
@@ -35,11 +36,17 @@ app.get('/about', function(req, res, next) {
 
 
 // Error Handlers
-app.use((req, res, next) => {
-    const err = new Error('Page Not Found');
-    err.status = 404;
-    next(err);
-});
+app.use('/:id', (req, res, next) => {
+    if (projects[req.params.id]) {
+        res.render('project');
+    } else {
+       const err = new Error('Page Not Found');
+       err.status = 404;
+       err.message = `Looks like the page you requested doesn't exists.` 
+       next(err);
+    }
+})
+
 
 app.use((err, req, res, next) => {
     if (err.status === 404) {
