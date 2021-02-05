@@ -1,7 +1,10 @@
 extends layout.pug
 
 block content
+ 
     h1= error.message
-    h2= error.status
-    p The page that you requested cannot be found. Please re-enter a valid path.
-    pre= error.stack
+        h2= error.status
+        p Oops! It looks like something went wrong with the server. 
+        pre= error.stack
+
+        a.home(href=`/`) Go Back!

@@ -1,15 +1,16 @@
 const express = require('express');
 const path = require('path');
+const { render } = require('pug');
 const { projects } = require('./data/data.json');
 
 const app = express();
 
 // View engine setup
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 // Add static middleware
-app.use( '/static', express.static('public'));
-
+app.use( '/static', express.static(path.join(__dirname, 'public')));
 
 // GET home page
 app.get('/', function(req, res, next) {
@@ -32,6 +33,7 @@ app.get('/about', function(req, res, next) {
     res.render('about');
 });
 
+
 // Error Handlers
 app.use((req, res, next) => {
     const err = new Error('Page Not Found');
@@ -40,10 +42,14 @@ app.use((req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-    res.locals.error = err;
-    res.status(err.status);
-    res.render('error');
-})
+    if (err.status === 404) {
+        res.status(404).render('page-not-found', { err });
+    } else {
+        err.message = err.message || `Oops! It looks like something went wrong with the server.`
+        res.status(err.status || 500).render('error', { err });
+    }
+});
+
 
 // Log of localhost server location
 app.listen(3000, () => {
