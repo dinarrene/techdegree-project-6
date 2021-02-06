@@ -1,5 +1,5 @@
 const express = require('express');
-const { exists } = require('fs');
+const router = express.Router();
 const path = require('path');
 const { render } = require('pug');
 const { projects } = require('./data/data.json');
@@ -18,6 +18,11 @@ app.get('/', function(req, res, next) {
     res.render('index', { projects });
 });
 
+// Get about page
+app.get('/about', function(req, res, next) {
+    res.render('about');
+});
+
 // GET projects page
 app.get('/projects/:id', function(req, res, next) {
     const projectId = req.params.id;
@@ -25,30 +30,34 @@ app.get('/projects/:id', function(req, res, next) {
     if (project) {
         res.render('project', { project });
     } else {
-        res.sendStatus(404);
+        const err = new Error();
+        err.status = 404;
+        err.message = `Looks like the page you requested doesn't exist.`
+        throw err;
     }
-})
+});
 
-// Get about page
-app.get('/about', function(req, res, next) {
-    res.render('about');
+//Get generated error route - create and throw 500 server error
+app.use('/error', (req, res, next) => {
+    console.log('Custom error route called');
+    const err = new Error();
+    err.status = 500;
+    throw err;
 });
 
 
-// Error Handlers
-app.use('/:id', (req, res, next) => {
-    if (projects[req.params.id]) {
-        res.render('project');
-    } else {
-       const err = new Error();
-       err.status = 404;
-       err.message = `Looks like the page you requested doesn't exists.` 
-       next(err);
-    }
-})
+// 404 Error handler
+app.use((req, res, next) => {
+    console.log('404 handler called');
+    res.status(404).render('page-not-found');
+});
 
-
+// Global error handler
 app.use((err, req, res, next) => {
+    if (err) {
+        console.log('Global handler called', err)
+    }
+
     if (err.status === 404) {
         res.status(404).render('page-not-found', { err });
     } else {
