@@ -26,6 +26,34 @@ p{
     color: rgb(78, 78, 78);
 }
 
+.container {
+    height: 100%;
+    background: rgb(186, 182, 189);
+}
+
+.errorPage {
+    width: 95%;
+    padding-left: 2rem;
+}
+
+.errorPage h1 {
+    padding-top: 2rem;
+    margin: 0;
+}
+
+.errorPage a.home {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    color: #000;
+    font-weight: 500;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 40px;
+}
 
 .box {
     background: rgb(186, 182, 189);
