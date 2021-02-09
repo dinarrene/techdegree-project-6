@@ -1,13 +1,13 @@
 extends layout.pug
 
 block content
+    .errorPage  
+        h1= err.message
+        h2= err.status
+        p The page that you requested cannot be found. Please re-enter a valid path.
+        pre= err.stack
 
-    h1= err.message
-    h1= err.status
-    p The page that you requested cannot be found. Please re-enter a valid path.
-    pre= err.stack
-
-    a.home(href=`/`) Go Back!
+        a.home(href=`/`) Go Back!
  
 
     

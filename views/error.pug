@@ -1,10 +1,10 @@
 extends layout.pug
 
 block content
- 
-    h1= err.message
-    h2= err.status
-    p Oops! It looks like something went wrong with the server. 
-    pre= err.stack
+    .errorPage 
+        h1= err.message
+        h2= err.status
+        p Oops! It looks like something went wrong with the server. 
+        pre= err.stack
 
-    a.home(href=`/`) Go Back!
+        a.home(href=`/`) Go Back!

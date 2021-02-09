@@ -1,5 +1,4 @@
 const express = require('express');
-const router = express.Router();
 const path = require('path');
 const { render } = require('pug');
 const { projects } = require('./data/data.json');
@@ -23,7 +22,16 @@ app.get('/about', function(req, res, next) {
     res.render('about');
 });
 
-// GET projects page
+
+//Get generated error route - create and throw 500 server error
+app.use('/error', (req, res, next) => {
+    console.log('Custom error route called');
+    const err = new Error();
+    err.status = 500;
+    throw err;
+});
+
+// Get/throw project page error
 app.get('/projects/:id', function(req, res, next) {
     const projectId = req.params.id;
     const project = projects.find( ({ id }) => id === +projectId)
@@ -37,14 +45,14 @@ app.get('/projects/:id', function(req, res, next) {
     }
 });
 
-//Get generated error route - create and throw 500 server error
-app.use('/error', (req, res, next) => {
-    console.log('Custom error route called');
+// Custom 404 error
+app.use((req, res, next) => {
+    console.log("Page load error is called");
     const err = new Error();
-    err.status = 500;
-    throw err;
+    err.status = 404;
+    err.message = `Looks like the page you requested doesn't exist.`
+    next(err);
 });
-
 
 // 404 Error handler
 app.use((req, res, next) => {
